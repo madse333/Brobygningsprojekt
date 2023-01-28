@@ -1,0 +1,66 @@
+doctype html
+html
+    head
+        meta(http-equiv="refresh" content="5")
+        title Brobygning 
+        style 
+            include ./index.css
+        script.
+            async function post(url, objekt) {
+                const respons = await fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify(objekt),
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                if (respons.status !== 201) // Created
+                    throw new Error(respons.status);
+                return await respons.text();
+            }
+
+            let clickfunction = async () => {
+                try {
+                    let modstander1 = prompt("Angiv den første modstander: ")
+                    let modstander2 = prompt("Angiv den anden modstander: ")
+
+                    if (modstander1 !== modstander2){
+                    await post("http://localhost:8888/", {modstander1 : modstander1, modstander2 : modstander2});
+                    window.location.href = "http://localhost:8888/fight";
+                    }
+                } catch (e) {
+                    console.log("Fejl");
+                }
+            }
+    body
+        center 
+            h1 Dataindsamling
+        div(class="grids-container")
+            center 
+                div(class="grid-container-highscores")
+                    table(class="grid-item-highscores")
+                        tr
+                            td
+                                p(class="highscoresLbl") Highscores
+                        tr 
+                            td 
+                                p(class="highscoresLbl") Gruppe: #{highscores[1]}        
+                        tr 
+                            td 
+                                p(class="highscoresLbl") ❤️ #{highscores[0][1]} 
+                        tr 
+                            td 
+                                p(class="highscoresLbl") 💪 #{highscores[1][1]}         
+            center 
+                div(class="grid-container")   
+                    each gruppe in grupper 
+                        div(class="grid-item-gruppe")
+                            b(class="gruppeNr") Gruppe: #{gruppe.gruppenr}
+                            each val in [0,1] 
+                                div(class="grid-item-måling-puls")
+                                    b(class="måling") #{emojis[val]} #{gruppe.målinger[val]}
+                            div(class="grid-item-måling-strength")
+                                img(src=gruppe.bicepFlex, width="100px", height="100px")
+                                    
+        center
+            div(class="fightButtonDiv")
+                button(class="fightButton" onclick='clickfunction()') Gå i kamp!
+        

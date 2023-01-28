@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Opgaver brobygning</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+</head>
+
+
+<body>
+<div class="tab">
+    
+    <!--Knapper-->
+    <button class="tablinks" onclick="openExercise(event, 'Bænkpres')">Bænkpres</button>
+    <button class="tablinks" onclick="openExercise(event, 'Dødløft')">Dødløft</button>
+    <button class="tablinks" onclick="openExercise(event, 'Squat')">Squat</button>
+
+    <!--Knappen til din egen øvelse skal kobles op her (Husk at de kobles på id'et fra 'Tab content')-->
+
+    <button class="tablinks" onclick="openCreateExercise(event, 'CreateWorkoutPlan')">Opret træningsplan</button>
+    <button class="antal" id="antalØvelser"></button>
+
+</div>
+
+  <!--Lav din egen øvelse (Tab content for din egen øvelse)-->
+  <div id="dinEgenØvelse" class="tabcontent">
+    <h3>
+        <!--Titel på øvelsen-->
+    </h3>
+
+    <p>
+        <!--Her kan du beskrive øvelsen-->
+    </p>
+
+    <ul>
+        <li>
+            <!--Det her er et list item, hvis du ønsker tekst opsat i punktform-->
+        </li>
+    </ul>
+    
+    <img src="linkDitEgetBillede.png"> <!--Her linker du blot et billed fra f.eks. google, 
+        højreklik på billedet og vælg 'Åben billede på ny fane', det er det link du skal bruge.
+        -->
+  </div>
+  
+  <!-- Tab content for bænkpres -->
+  <div id="Bænkpres" class="tabcontent">
+    <h3>
+        Bænkpres
+    </h3>
+
+    <p>
+        Udgangspunktet for et godt bænkpres er dit opspænd, altså måden du ligger på. Desto mere dit mål er styrke, desto mere bør du arbejde med at svaje mere i ryggen, men selv hvis dit mål er muskelmasse, er det en fordel ikke at ligge helt flad som en pandekage.
+    </p>
+
+    <p>
+        Jo mere du svajer i ryggen og laver opspænd, jo kortere bliver range of motion. Omvendt gælder det naturligvis, at desto mere fladt du ligger, desto længere bliver range of motion. Det er selvfølgelig blot én faktor, så det ene er ikke nødvendigvis bedre end det andet - det afhænger af dit mål.   
+    </p>
+
+    <p>
+        Bænkpres træner primært bryst, skulder og triceps. Jo bredere du griber stangen og kører albuerne ud til siden, jo mere er fokus på brystet, mens hvis du holder smalt og kører albuerne ind til siden, så vil fokus i højere grad være på triceps.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <li>Samle dine skulderblade og træk dem ned</li>
+                    <li>Grib stangen bredere end skulderbredde</li>
+                    <li>Afhængigt af dit mål kan du vælge at spænde dig mere op (svaje i ryggen)</li>
+                    <li>Start med stangen i en lige linje over håndled, albuer og skuldre</li>
+                    <li>Hold albuerne under stangen både på vej ned og op</li>
+                    <li>Pres lidt skråt bagud på vej op til samme position, som du startede i</li>
+                </ul>
+            </td>
+            <td>
+            <img class="bænkpres" src="https://i.ibb.co/JFy1Fbs/B-nkpres.png">
+            </td>
+        </tr>
+    </table>
+
+  </div>
+  
+
+  <!-- Tab content for dødløft -->
+  <div id="Dødløft" class="tabcontent">
+    <h3>
+        Dødløft
+    </h3>
+
+    <p>
+        Nogle frygter at få rygskader, når de starter med dødløft, men med fokus på nogle basale teknikker, er dødløft en sikker og god øvelse i de fleste træningsprogrammer. Teknikken ser forskellig ud for alle og afhænger i stor grad af din kropsbygning og dit mål med træningen.
+    </p>
+
+    <p>
+        Hvis du gerne vil være bedre i dødløft, så bliver du nødt til at øve løftet. Hvis du er nervøs for løftet eller er helt ny i gamet, så giver det god mening, at starte med en let vægt - men det overrasker dig næppe.
+    </p>
+    
+    <p>
+        Selve udførslen af dødløft er egentlig ganske simpel. Startpositionen er det vigtigste udgangspunkt for at få et godt dødløft. Når den er på plads, vil resten af løftet blive godt. Der er nemlig ingen sænkefase (excentrisk), så du skal selv finde en god position, når stangen ligger på gulvet.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <li>Stil dig med hoftebredde mellem fødderne og cirka en knytnæves afstand til stangen fra dine skinneben, når dine ben er strakte.</li>
+                    <li>Derefter griber du fat om stangen med armene akkurat uden for benene med dobbelt overhåndsgreb, mixgreb (krydsgreb) eller eventuelt med låsegreb eller straps.</li>
+                    <li>Du kan finde din startposition på to måder:</li>
+                    <ul>
+                        <li>A: Sæt dig ned til din startposition og tag fat i stangen.</li>
+                        <li>B: Bøj dig forover med næsten strakte ben, tag fat i stangen og spænd dig op ved at trække dig ned, mens du holder ryggen ret, indtil dine skuldre er lidt foran stangen.</li>
+                    </ul>
+                    <li>Med skuldre lidt foran stangen vil din hofte være relativt højt og du kan nu træde igennem gulvet.</li>
+                </ul>
+            </td>
+            <td>
+            <img class="dødløft" src="https://i.ibb.co/CW3jRth/D-dl-ft.png">
+            </td>
+        </tr>
+    </table>
+
+  </div>
+  
+
+  <!-- Tab content for squat -->
+  <div id="Squat" class="tabcontent">
+    <h3>
+        Squat
+    </h3>
+
+    <p>
+        Squat er primært en underkropsøvelse, men involverer tilpas mange muskelgrupper (primært forlår, baglår, baller, mave, lænd) til at du også kan opnå en god kardiovaskulær effekt. Det er fordelagtigt at du fokuserer på din teknik før antallet af kg - på den måde skal der nok komme mange kg på senere.
+    </p>
+    
+    <p>
+        Alt afhængigt af hvordan du er bygget, især længden af dine lårben og længden på din overkrop, skal teknikken i squat tilpasses. Det vil sige at dig og din træningsmakker ikke nødvendigvis bør løfte på samme måde med samme teknik.
+    </p>
+
+    <p>
+        Tjek dog først om squatten er dyb nok, inden det giver mening at se videre på disse tre parametre. De tre S’er skal som udgangspunkt passe sammen for at stangens bane (set fra siden) går lige ned og op over midten af foden. Det er en fordel for at den kraft, du udvikler rent faktisk overføres bedst muligt til stangen og ikke går tabt.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <li>Indstil stativet i en højde, hvor du hverken skal starte i en halv squat eller stå på tæer for at få stangen ud af stativet.</li>
+                    <li>Tag fat lidt bredere end skulderbredde og læg stangen på den øverste del af ryggen med albuerne under stangen.</li>
+                    <li>Stil dig under stangen med begge fødder, så du kan presse stangen lige op og gå ud med færrest mulige skridt (2-3).</li>
+                    <li>Placer fødderne i en passende bredde og vinkel. For de fleste er lidt bredere end hoftebredde med fødderne pegende lidt udad en god start.</li>
+                    <li>Tag en dyb indåndig, spænd i maven og sæt dig kontrolleret ned til den dybde din mobilitet tillader.</li>
+                    <li>Hvis stangen ligger højt og du står smalt, kan du starte med knæene frem og ud. Hvis stangen ligger lavt og du står bredt, kan du starte med at skubbe hoften bagud.</li>
+                    <li>Lad knæene følge tæernes retning på vej ned og hold ryggen ret.</li>
+                    <li>Hold vægten jævnt på hele foden.</li>
+                </ul>
+            </td>
+            <td>
+            <img class="squat" src="https://i.ibb.co/5LJr4b0/Squat.png">
+            </td>
+        </tr>
+    </table>
+
+  </div>
+
+
+  <div id="CreateWorkoutPlan" class="tabcontent">
+    <h3>
+        Personlig træningsplan
+    </h3>
+
+    <table>
+    <tr>
+    <td>
+    <table>
+        <tr>
+            <td id="Øvelsesliste">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" id="antalSæt"> Antal sæt:
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" id="antalReps"> Antal repetitioner:
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" class="createExercise" onclick="addExercise(event)">Tilføj øvelse</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul id="træningsplan">
+
+                    
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" class="downloadTræningsplan" onclick="gemTræningsplan()">Download træningsplan</button>
+            </td>
+        </tr>
+    </table>
+    </td>
+    <td>
+        <table>
+            <tr>
+                <td>
+                    <textarea id="Kommentar" name="tfxKommentar", cols="30", rows="10", placeholder="Tilføj kommentar til træningsplan..."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="tilføjKommentar" onclick="tilføjKommentar()">Tilføj kommentar</button>
+                </td>
+            </tr>
+        </table>
+    </td>
+    </tr>
+    </table>
+
+  </div>
+
+
+</body>
+</html>

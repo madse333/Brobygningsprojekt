@@ -1,0 +1,86 @@
+h1 {
+    padding-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.grids-container {
+    display: inline-grid;
+    grid-template-columns: 400px, 400px;
+    grid-template-rows: auto;
+    grid-auto-flow: column;
+    justify-items: center;
+    padding: 0px 30px;
+    gap: 50px;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: auto;
+    justify-items: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+.grid-item-gruppe {
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 9px #999;
+    width: 150px;
+    height: 150px;
+}
+
+.grid-item-highscores {
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 9px #999;
+    width: 250px;
+    height: 300px;
+}
+
+.highscoresLbl {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top;
+    row-gap: 100px;
+}
+
+td {
+    font-size: 20px;
+}
+
+p, b{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.kampOplysninger{
+    display: inline-grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: auto;
+    justify-items: center;
+    padding: 10px;
+    
+}
+
+
+.fightButton {
+    size: 100px;
+}
+
+.fightButton {
+    border-radius: 4px;
+    box-shadow: 0 9px #999;
+    background-color: rgb(180, 220, 255);
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    width: 200px;
+    margin: 5px;
+}
+
+

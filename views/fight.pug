@@ -1,0 +1,26 @@
+doctype html 
+html 
+    head
+        style 
+            include ./fight.css
+        script(src='./fight.js')
+            
+    
+    body
+        center 
+            div
+                b(class="vsLbl") VS 
+            div(class="grid-container")
+                each gruppe in modstandere
+                    div(class="grid-item-gruppe")
+                        b(class="gruppeNr") Gruppe: #{gruppe.gruppenr}
+                        div(class="grid-item-måling-strength")
+                            img(class="img" src=gruppe.bicepFlex, width="100px", height="100px")
+                        div(class="point")
+                            b(id=gruppe.gruppenr) 0
+            div
+                b(id="counterLbl")
+            div 
+                b(id ="counter" onchange="beginFight()")
+            div 
+                button(class="startButton" onclick='startGame()') Start             
