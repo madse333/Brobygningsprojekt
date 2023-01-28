@@ -33,32 +33,35 @@ html
     body
         center 
             h1 Dataindsamling
-        div(class="grids-container")
-            center 
-                div(class="grid-container-highscores")
-                    table(class="grid-item-highscores")
-                        tr
-                            td
-                                p(class="highscoresLbl") Highscores
-                        tr 
-                            td 
-                                p(class="highscoresLbl") Gruppe: #{highscores[1]}        
-                        tr 
-                            td 
-                                p(class="highscoresLbl") ❤️ #{highscores[0][1]} 
-                        tr 
-                            td 
-                                p(class="highscoresLbl") 💪 #{highscores[1][1]}         
-            center 
-                div(class="grid-container")   
-                    each gruppe in grupper 
-                        div(class="grid-item-gruppe")
-                            b(class="gruppeNr") Gruppe: #{gruppe.gruppenr}
-                            each val in [0,1] 
-                                div(class="grid-item-måling-puls")
-                                    b(class="måling") #{emojis[val]} #{gruppe.målinger[val]}
-                            div(class="grid-item-måling-strength")
-                                img(src=gruppe.bicepFlex, width="100px", height="100px")
+
+        center 
+            div(class="grids-container")
+                center 
+                    div(class="grid-container-highscores")
+                        table(class="grid-item-highscores")
+                            tr
+                                td
+                                    p(class="highscoresLbl") Highscores
+                            tr 
+                                td 
+                                    p(class="highscoresLbl") Gruppe: #{highscores[1]}        
+                            tr 
+                                td 
+                                    p(class="highscoresLbl") ❤️ #{highscores[0][1]} 
+                            tr 
+                                td 
+                                    p(class="highscoresLbl") 💪 #{highscores[1][1]}  
+
+                center 
+                    div(class="grid-container")   
+                        each gruppe in grupper 
+                            div(class="grid-item-gruppe")
+                                b(class="gruppeNr") Gruppe: #{gruppe.gruppenr}
+                                each val in [0,1] 
+                                    div(class="grid-item-måling-puls")
+                                        b(class="måling") #{emojis[val]} #{gruppe.målinger[val]}
+                                div(class="grid-item-måling-strength")
+                                    img(src=gruppe.bicepFlex, width="100px", height="100px")
                                     
         center
             div(class="fightButtonDiv")
