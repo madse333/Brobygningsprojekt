@@ -17,6 +17,11 @@ Værktøjer til webprogrammeringsopgaven:
 Værktøjer til dataindsamling:
 - Express.js
 - Node.js
+- Pug
 
 
 Billeder fra det endelig produkt:
+![alt text](https://github.com/madse333/Brobygningsprojekt/blob/master/Screenshots/BrobygningsProjekt.png)
+
+
+(Koden kører i denne version uden database, men bare med random tal for at illustrere funktionaliteten)
